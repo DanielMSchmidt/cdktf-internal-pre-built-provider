@@ -1,6 +1,6 @@
 {
-  "name": "@cdktf/provider-google",
-  "description": "Prebuilt google Provider for Terraform CDK (cdktf)",
+  "name": "@dschmidt/cdktf-internal-provider-google",
+  "description": "A prebuilt provider for google, testing out an alternative code generation for cdktf",
   "repository": {
     "type": "git",
     "url": "https://github.com/hashicorp/cdktf-provider-google.git"
@@ -57,13 +57,7 @@
     "cdktf": "^0.12.2",
     "constructs": "^10.0.0"
   },
-  "keywords": [
-    "cdk",
-    "cdktf",
-    "google",
-    "provider",
-    "terraform"
-  ],
+  "keywords": [],
   "engines": {
     "node": ">= 14.17.0"
   },
@@ -79,33 +73,27 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "com.hashicorp.cdktf.providers.google",
+        "package": "com.hashicorp.dschmidt.providers.google",
         "maven": {
           "groupId": "com.hashicorp",
-          "artifactId": "cdktf-provider-google"
+          "artifactId": "dschmidt-provider-google"
         }
       },
       "python": {
-        "distName": "cdktf-cdktf-provider-google",
-        "module": "cdktf_cdktf_provider_google"
+        "distName": "dschmidt-dschmidt-provider-google",
+        "module": "dschmidt_dschmidt_provider_google"
       },
       "dotnet": {
-        "namespace": "HashiCorp.Cdktf.Providers.Google",
-        "packageId": "HashiCorp.Cdktf.Providers.Google"
+        "namespace": "HashiCorp.Dschmidt.Providers.Google",
+        "packageId": "HashiCorp.Dschmidt.Providers.Google"
       },
       "go": {
-        "moduleName": "github.com/hashicorp/cdktf-provider-google-go"
+        "moduleName": "github.com/DanielMSchmidt/dschmidt-provider-google-go"
       }
     },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
-    }
-  },
-  "cdktf": {
-    "provider": {
-      "name": "registry.terraform.io/hashicorp/google",
-      "version": "4.35.0"
     }
   },
   "resolutions": {
