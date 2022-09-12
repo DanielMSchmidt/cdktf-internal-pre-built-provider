@@ -7,30 +7,30 @@ This repo builds and publishes the Terraform google Provider bindings for [CDK f
 
 ### NPM
 
-The npm package is available at [https://www.npmjs.com/package/@cdktf/provider-google](https://www.npmjs.com/package/@cdktf/provider-google).
+The npm package is available at [https://www.npmjs.com/package/@dschmidt/provider-google](https://www.npmjs.com/package/@dschmidt/provider-google).
 
-`npm install @cdktf/provider-google`
+`npm install @dschmidt/provider-google`
 
 ### PyPI
 
-The PyPI package is available at [https://pypi.org/project/cdktf-cdktf-provider-google](https://pypi.org/project/cdktf-cdktf-provider-google).
+The PyPI package is available at [https://pypi.org/project/dschmidt-cdktf-provider-google](https://pypi.org/project/dschmidt-cdktf-provider-google).
 
-`pipenv install cdktf-cdktf-provider-google`
+`pipenv install dschmidt-cdktf-provider-google`
 
 ### Nuget
 
-The Nuget package is available at [https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Google](https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Google).
+The Nuget package is available at [https://www.nuget.org/packages/DSchmidt.Dschmidt.Providers.Google](https://www.nuget.org/packages/DSchmidt.Dschmidt.Providers.Google).
 
-`dotnet add package HashiCorp.Cdktf.Providers.Google`
+`dotnet add package DSchmidt.Dschmidt.Providers.Google`
 
 ### Maven
 
-The Maven package is available at [https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-google](https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-google).
+The Maven package is available at [https://mvnrepository.com/artifact/com.danielmschmidt/dschmidt-provider-google](https://mvnrepository.com/artifact/com.danielmschmidt/dschmidt-provider-google).
 
 ```
 <dependency>
-    <groupId>com.hashicorp</groupId>
-    <artifactId>cdktf-provider-google</artifactId>
+    <groupId>com.danielmschmidt</groupId>
+    <artifactId>dschmidt-provider-google</artifactId>
     <version>[REPLACE WITH DESIRED VERSION]</version>
 </dependency>
 ```

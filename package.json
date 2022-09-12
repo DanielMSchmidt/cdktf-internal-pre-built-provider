@@ -1,9 +1,9 @@
 {
-  "name": "@cdktf/provider-google",
+  "name": "@dschmidt/provider-google",
   "description": "Prebuilt google Provider for Terraform CDK (cdktf)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hashicorp/cdktf-provider-google.git"
+    "url": "https://github.com/danielmschmidt/dschmidt-provider-google.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -83,22 +83,22 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "com.hashicorp.cdktf.providers.google",
+        "package": "com.danielmschmidt.cdktf.providers.google",
         "maven": {
-          "groupId": "com.hashicorp",
-          "artifactId": "cdktf-provider-google"
+          "groupId": "com.danielmschmidt",
+          "artifactId": "dschmidt-provider-google"
         }
       },
       "python": {
-        "distName": "cdktf-cdktf-provider-google",
-        "module": "cdktf_cdktf_provider_google"
+        "distName": "dschmidt-cdktf-provider-google",
+        "module": "dschmidt_cdktf_provider_google"
       },
       "dotnet": {
-        "namespace": "HashiCorp.Cdktf.Providers.Google",
-        "packageId": "HashiCorp.Cdktf.Providers.Google"
+        "namespace": "DSchmidt.Dschmidt.Providers.Google",
+        "packageId": "DSchmidt.Dschmidt.Providers.Google"
       },
       "go": {
-        "moduleName": "github.com/hashicorp/cdktf-provider-google-go",
+        "moduleName": "github.com/danielmschmidt/dschmidt-provider-google-go",
         "packageName": "google"
       }
     },
