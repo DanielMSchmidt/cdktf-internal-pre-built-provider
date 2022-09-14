@@ -128,7 +128,7 @@
       },
       "steps": [
         {
-          "exec": "mkdir -p src && rm -rf ./src/* && cdktf get && cp -R .gen/providers/google/* ./src/ && cp .gen/versions.json ./src/version.json"
+          "exec": "mkdir -p src && rm -rf ./src/* && cdktf get && cp -R .gen/providers/google-beta/* ./src/ && cp .gen/versions.json ./src/version.json"
         },
         {
           "spawn": "default"

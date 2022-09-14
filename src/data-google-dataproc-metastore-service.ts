@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service
+// https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDataprocMetastoreServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service#id DataGoogleDataprocMetastoreService#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service#id DataGoogleDataprocMetastoreService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,11 +18,11 @@ export interface DataGoogleDataprocMetastoreServiceConfig extends cdktf.Terrafor
   * The location where the metastore service should reside.
 The default value is 'global'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service#location DataGoogleDataprocMetastoreService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service#location DataGoogleDataprocMetastoreService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service#project DataGoogleDataprocMetastoreService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service#project DataGoogleDataprocMetastoreService#project}
   */
   readonly project?: string;
   /**
@@ -30,7 +30,7 @@ The default value is 'global'.
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 63 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service#service_id DataGoogleDataprocMetastoreService#service_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service#service_id DataGoogleDataprocMetastoreService#service_id}
   */
   readonly serviceId: string;
 }
@@ -96,6 +96,81 @@ export class DataGoogleDataprocMetastoreServiceEncryptionConfigList extends cdkt
   */
   public get(index: number): DataGoogleDataprocMetastoreServiceEncryptionConfigOutputReference {
     return new DataGoogleDataprocMetastoreServiceEncryptionConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersions {
+}
+
+export function dataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsToTerraform(struct?: DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // config_overrides - computed: true, optional: false, required: false
+  private _configOverrides = new cdktf.StringMap(this, "config_overrides");
+  public get configOverrides() {
+    return this._configOverrides;
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsOutputReference {
+    return new DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleDataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
@@ -277,10 +352,21 @@ export class DataGoogleDataprocMetastoreServiceHiveMetastoreConfigOutputReferenc
     }
   }
 
+  // auxiliary_versions - computed: true, optional: false, required: false
+  private _auxiliaryVersions = new DataGoogleDataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsList(this, "auxiliary_versions", true);
+  public get auxiliaryVersions() {
+    return this._auxiliaryVersions;
+  }
+
   // config_overrides - computed: true, optional: false, required: false
   private _configOverrides = new cdktf.StringMap(this, "config_overrides");
   public get configOverrides() {
     return this._configOverrides;
+  }
+
+  // endpoint_protocol - computed: true, optional: false, required: false
+  public get endpointProtocol() {
+    return this.getStringAttribute('endpoint_protocol');
   }
 
   // kerberos_config - computed: true, optional: false, required: false
@@ -382,9 +468,138 @@ export class DataGoogleDataprocMetastoreServiceMaintenanceWindowList extends cdk
     return new DataGoogleDataprocMetastoreServiceMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfig {
+}
+
+export function dataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigToTerraform(struct?: DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigOutputReference {
+    return new DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDataprocMetastoreServiceMetadataIntegration {
+}
+
+export function dataGoogleDataprocMetastoreServiceMetadataIntegrationToTerraform(struct?: DataGoogleDataprocMetastoreServiceMetadataIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceMetadataIntegrationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDataprocMetastoreServiceMetadataIntegration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDataprocMetastoreServiceMetadataIntegration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // data_catalog_config - computed: true, optional: false, required: false
+  private _dataCatalogConfig = new DataGoogleDataprocMetastoreServiceMetadataIntegrationDataCatalogConfigList(this, "data_catalog_config", false);
+  public get dataCatalogConfig() {
+    return this._dataCatalogConfig;
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceMetadataIntegrationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDataprocMetastoreServiceMetadataIntegrationOutputReference {
+    return new DataGoogleDataprocMetastoreServiceMetadataIntegrationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service google_dataproc_metastore_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service google_dataproc_metastore_service}
 */
 export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSource {
 
@@ -398,7 +613,7 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service google_dataproc_metastore_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_dataproc_metastore_service google_dataproc_metastore_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -408,9 +623,9 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
     super(scope, id, {
       terraformResourceType: 'google_dataproc_metastore_service',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -496,6 +711,12 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   private _maintenanceWindow = new DataGoogleDataprocMetastoreServiceMaintenanceWindowList(this, "maintenance_window", false);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
+  }
+
+  // metadata_integration - computed: true, optional: false, required: false
+  private _metadataIntegration = new DataGoogleDataprocMetastoreServiceMetadataIntegrationList(this, "metadata_integration", false);
+  public get metadataIntegration() {
+    return this._metadataIntegration;
   }
 
   // name - computed: true, optional: false, required: false

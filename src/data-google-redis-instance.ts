@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/redis_instance
+// https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#id DataGoogleRedisInstance#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance#id DataGoogleRedisInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,17 +17,17 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   /**
   * The ID of the instance or a fully qualified identifier for the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#name DataGoogleRedisInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance#name DataGoogleRedisInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#project DataGoogleRedisInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance#project DataGoogleRedisInstance#project}
   */
   readonly project?: string;
   /**
   * The name of the Redis region of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#region DataGoogleRedisInstance#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance#region DataGoogleRedisInstance#region}
   */
   readonly region?: string;
 }
@@ -494,7 +494,7 @@ export class DataGoogleRedisInstanceServerCaCertsList extends cdktf.ComplexList 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/redis_instance google_redis_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance google_redis_instance}
 */
 export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
@@ -508,7 +508,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/redis_instance google_redis_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_redis_instance google_redis_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -518,9 +518,9 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

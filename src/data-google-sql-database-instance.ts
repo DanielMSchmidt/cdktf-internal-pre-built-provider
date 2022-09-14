@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/sql_database_instance
+// https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance#id DataGoogleSqlDatabaseInstance#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance#id DataGoogleSqlDatabaseInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,13 +17,13 @@ export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMeta
   /**
   * The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance#name DataGoogleSqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance#name DataGoogleSqlDatabaseInstance#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance#project DataGoogleSqlDatabaseInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance#project DataGoogleSqlDatabaseInstance#project}
   */
   readonly project?: string;
 }
@@ -1464,7 +1464,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsList extends cdktf.ComplexList
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance google_sql_database_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance google_sql_database_instance}
 */
 export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
 
@@ -1478,7 +1478,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance google_sql_database_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_sql_database_instance google_sql_database_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1488,9 +1488,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

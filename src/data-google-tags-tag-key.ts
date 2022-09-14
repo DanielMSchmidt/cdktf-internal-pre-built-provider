@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/tags_tag_key
+// https://www.terraform.io/docs/providers/google-beta/d/google_tags_tag_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleTagsTagKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#parent DataGoogleTagsTagKey#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_tags_tag_key#parent DataGoogleTagsTagKey#parent}
   */
   readonly parent: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_tags_tag_key#short_name DataGoogleTagsTagKey#short_name}
   */
   readonly shortName: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key google_tags_tag_key}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_tags_tag_key google_tags_tag_key}
 */
 export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key google_tags_tag_key} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_tags_tag_key google_tags_tag_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -42,9 +42,9 @@ export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_key',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

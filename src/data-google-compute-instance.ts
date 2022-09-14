@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_instance
+// https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance#id DataGoogleComputeInstance#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance#id DataGoogleComputeInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,25 +17,25 @@ export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArgu
   /**
   * The name of the instance. One of name or self_link must be provided.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance#name DataGoogleComputeInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance#name DataGoogleComputeInstance#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance#project DataGoogleComputeInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance#project DataGoogleComputeInstance#project}
   */
   readonly project?: string;
   /**
   * The URI of the created resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance#self_link DataGoogleComputeInstance#self_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance#self_link DataGoogleComputeInstance#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance#zone DataGoogleComputeInstance#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance#zone DataGoogleComputeInstance#zone}
   */
   readonly zone?: string;
 }
@@ -87,6 +87,11 @@ export class DataGoogleComputeInstanceAdvancedMachineFeaturesOutputReference ext
   // threads_per_core - computed: true, optional: false, required: false
   public get threadsPerCore() {
     return this.getNumberAttribute('threads_per_core');
+  }
+
+  // visible_core_count - computed: true, optional: false, required: false
+  public get visibleCoreCount() {
+    return this.getNumberAttribute('visible_core_count');
   }
 }
 
@@ -854,6 +859,70 @@ export class DataGoogleComputeInstanceNetworkInterfaceList extends cdktf.Complex
     return new DataGoogleComputeInstanceNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComputeInstanceNetworkPerformanceConfig {
+}
+
+export function dataGoogleComputeInstanceNetworkPerformanceConfigToTerraform(struct?: DataGoogleComputeInstanceNetworkPerformanceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeInstanceNetworkPerformanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceNetworkPerformanceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceNetworkPerformanceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // total_egress_bandwidth_tier - computed: true, optional: false, required: false
+  public get totalEgressBandwidthTier() {
+    return this.getStringAttribute('total_egress_bandwidth_tier');
+  }
+}
+
+export class DataGoogleComputeInstanceNetworkPerformanceConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceNetworkPerformanceConfigOutputReference {
+    return new DataGoogleComputeInstanceNetworkPerformanceConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleComputeInstanceReservationAffinitySpecificReservation {
 }
 
@@ -1371,7 +1440,7 @@ export class DataGoogleComputeInstanceShieldedInstanceConfigList extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance google_compute_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance google_compute_instance}
 */
 export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
@@ -1385,7 +1454,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance google_compute_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_compute_instance google_compute_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1395,9 +1464,9 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1571,6 +1640,12 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   private _networkInterface = new DataGoogleComputeInstanceNetworkInterfaceList(this, "network_interface", false);
   public get networkInterface() {
     return this._networkInterface;
+  }
+
+  // network_performance_config - computed: true, optional: false, required: false
+  private _networkPerformanceConfig = new DataGoogleComputeInstanceNetworkPerformanceConfigList(this, "network_performance_config", false);
+  public get networkPerformanceConfig() {
+    return this._networkPerformanceConfig;
   }
 
   // project - computed: false, optional: true, required: false

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_bucket
+// https://www.terraform.io/docs/providers/google-beta/d/google_storage_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleStorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket#id DataGoogleStorageBucket#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_storage_bucket#id DataGoogleStorageBucket#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,7 +17,7 @@ export interface DataGoogleStorageBucketConfig extends cdktf.TerraformMetaArgume
   /**
   * The name of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket#name DataGoogleStorageBucket#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_storage_bucket#name DataGoogleStorageBucket#name}
   */
   readonly name: string;
 }
@@ -691,7 +691,7 @@ export class DataGoogleStorageBucketWebsiteList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket google_storage_bucket}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_storage_bucket google_storage_bucket}
 */
 export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
@@ -705,7 +705,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket google_storage_bucket} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_storage_bucket google_storage_bucket} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -715,9 +715,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -812,6 +812,11 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // project - computed: true, optional: false, required: false
   public get project() {
     return this.getStringAttribute('project');
+  }
+
+  // public_access_prevention - computed: true, optional: false, required: false
+  public get publicAccessPrevention() {
+    return this.getStringAttribute('public_access_prevention');
   }
 
   // requester_pays - computed: true, optional: false, required: false

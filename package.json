@@ -1,9 +1,9 @@
 {
-  "name": "@dschmidt/provider-google",
-  "description": "Prebuilt google Provider for Terraform CDK (cdktf)",
+  "name": "@dschmidt/provider-google-beta",
+  "description": "Prebuilt google-beta Provider for Terraform CDK (cdktf)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielmschmidt/dschmidt-provider-google.git"
+    "url": "https://github.com/danielmschmidt/dschmidt-provider-googlebeta.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -64,7 +64,7 @@
   "keywords": [
     "cdk",
     "cdktf",
-    "google",
+    "google-beta",
     "provider",
     "terraform"
   ],
@@ -83,23 +83,23 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "com.danielmschmidt.cdktf.providers.google",
+        "package": "com.danielmschmidt.cdktf.providers.google_beta",
         "maven": {
           "groupId": "com.danielmschmidt",
-          "artifactId": "dschmidt-provider-google"
+          "artifactId": "dschmidt-provider-google-beta"
         }
       },
       "python": {
-        "distName": "dschmidt-cdktf-provider-google",
-        "module": "dschmidt_cdktf_provider_google"
+        "distName": "dschmidt-cdktf-provider-google_beta",
+        "module": "dschmidt_cdktf_provider_google_beta"
       },
       "dotnet": {
-        "namespace": "DSchmidt.Dschmidt.Providers.Google",
-        "packageId": "DSchmidt.Dschmidt.Providers.Google"
+        "namespace": "DSchmidt.Dschmidt.Providers.GoogleBeta",
+        "packageId": "DSchmidt.Dschmidt.Providers.GoogleBeta"
       },
       "go": {
-        "moduleName": "github.com/danielmschmidt/dschmidt-provider-google-go",
-        "packageName": "google"
+        "moduleName": "github.com/danielmschmidt/dschmidt-provider-googlebeta-go",
+        "packageName": "googlebeta"
       }
     },
     "tsc": {
@@ -110,7 +110,7 @@
   "cdktf": {
     "provider": {
       "name": "registry.terraform.io/hashicorp/google",
-      "version": "4.35.0"
+      "version": "4.36.0"
     }
   },
   "resolutions": {

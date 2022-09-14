@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/dns_record_set
+// https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,32 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#id DataGoogleDnsRecordSet#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set#id DataGoogleDnsRecordSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#name DataGoogleDnsRecordSet#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set#name DataGoogleDnsRecordSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#project DataGoogleDnsRecordSet#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set#project DataGoogleDnsRecordSet#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#type DataGoogleDnsRecordSet#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set#type DataGoogleDnsRecordSet#type}
   */
   readonly type: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_record_set google_dns_record_set}
+* Represents a {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set google_dns_record_set}
 */
 export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
 
@@ -47,7 +47,7 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dns_record_set google_dns_record_set} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google-beta/d/google_dns_record_set google_dns_record_set} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -57,9 +57,9 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_dns_record_set',
       terraformGeneratorMetadata: {
-        providerName: 'google',
+        providerName: 'google-beta',
         providerVersion: '4.36.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersionConstraint: '~> 4.36'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
