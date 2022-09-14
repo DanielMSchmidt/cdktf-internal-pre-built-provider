@@ -257,6 +257,7 @@ export * as dataprocMetastoreServiceIamMember from './dataproc-metastore-service
 export * as dataprocMetastoreServiceIamPolicy from './dataproc-metastore-service-iam-policy';
 export * as dataprocWorkflowTemplate from './dataproc-workflow-template';
 export * as datastoreIndex from './datastore-index';
+export * as datastreamConnectionProfile from './datastream-connection-profile';
 export * as deploymentManagerDeployment from './deployment-manager-deployment';
 export * as dialogflowAgent from './dialogflow-agent';
 export * as dialogflowCxAgent from './dialogflow-cx-agent';
